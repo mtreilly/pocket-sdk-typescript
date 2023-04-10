@@ -1,0 +1,11 @@
+{
+  "name": "pocket-sdk",
+  "version": "1.0.0",
+  "description": "Simple SDK for interacting with getpocket api with TypeScript",
+  "main": "sdk.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Micheál Reilly Sendal",
+  "license": "MIT"
+}
