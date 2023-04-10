@@ -1,13 +1,8 @@
 import { parseErrorResponse } from "./parseErrorResponse";
 
-type ErrorResponse = {
-  code: number;
-  message: string;
-};
-
 const OAUTH_REQUEST_URL = "https://getpocket.com/v3/oauth/request";
 
-export default function getRequestTokenUrl(consumerKey: string, redirectUri: string, state?: string) {
+function getRequestTokenUrl(consumerKey: string, redirectUri: string, state?: string) {
   const requestData = {
     consumer_key: consumerKey,
     redirect_uri: redirectUri,
@@ -24,7 +19,7 @@ export default function getRequestTokenUrl(consumerKey: string, redirectUri: str
   });
 }
 
-async function getRequestToken(consumerKey: string, redirectUri: string, state?: string): Promise<string> {
+export default async function getRequestToken(consumerKey: string, redirectUri: string, state?: string): Promise<string> {
   const response = await getRequestTokenUrl(consumerKey, redirectUri, state);
 
   if (!response.ok) {

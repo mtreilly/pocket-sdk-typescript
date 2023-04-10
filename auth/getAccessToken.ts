@@ -5,7 +5,7 @@ interface AccessTokenResponse {
   username: string;
 }
 
-export default async function convertRequestTokenToAccessToken(consumerKey: string, code: string): Promise<AccessTokenResponse> {
+export default async function getAccessToken(consumerKey: string, code: string): Promise<AccessTokenResponse> {
   const OAUTH_AUTHORIZE_URL = "https://getpocket.com/v3/oauth/authorize";
 
   const requestData = {
