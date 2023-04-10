@@ -1,5 +1,5 @@
-import { processErrorResponse } from "./error";
-import { processRateLimitError } from "./rate-limit";
+import { processErrorResponse } from "./errors/processErrorResponse";
+import { processRateLimitError } from "./errors/processRateLimitError";
 import { PocketAction, PocketAddItemOptions, PocketGetOptions } from "./request-interfaces";
 import { PocketAddItemResponse, PocketItem } from "./response-interfaces";
 
