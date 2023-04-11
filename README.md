@@ -31,7 +31,7 @@ import { PocketSDK } from "pocket-sdk-typescript";
 
 ## Examples
 
-We have provided several example applications in the examples folder to help you get started with the SDK. Simply navigate to the examples folder and follow the instructions provided in each example's README.
+We have provided several examples in the example folder to help you get started with the SDK.
 
 ## Contributing
 
