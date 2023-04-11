@@ -1,7 +1,7 @@
 import { processErrorResponse } from "./errors/processErrorResponse.js";
 import { processRateLimitError } from "./errors/processRateLimitError.js";
 import { PocketAction, PocketAddItemOptions, PocketGetOptions } from "./interfaces/requests.js";
-import { PocketAddItemResponse, PocketItem, PocketRetrieveResponse } from "./interfaces/responses.js";
+import { PocketAddItemResponse, PocketRetrieveResponse } from "./interfaces/responses.js";
 
 export class PocketSDK {
   private consumerKey: string;
