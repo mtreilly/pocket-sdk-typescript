@@ -1,4 +1,4 @@
-import { parseErrorResponse } from "./parseErrorResponse";
+import { parseErrorResponse } from "./parseErrorResponse.js";
 
 const OAUTH_REQUEST_URL = "https://getpocket.com/v3/oauth/request";
 

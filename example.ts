@@ -1,8 +1,12 @@
-import { PocketAction, PocketAddItemOptions } from "./request-interfaces";
+import { PocketAction, PocketAddItemOptions } from "./interfaces/requests";
 import { PocketSDK } from "./sdk";
+import getRequestToken from "./auth/getRequestToken";
 
 const consumerKey = "your_consumer_key";
 const accessToken = "user_access_token";
+const redirectUri = "https://webhook.site/2ad5f9f6-e29b-4c38-a27c-5e372bdc03b4";
+
+const result = getRequestToken(consumerKey, redirectUri);
 
 const pocketSDK = new PocketSDK(consumerKey);
 

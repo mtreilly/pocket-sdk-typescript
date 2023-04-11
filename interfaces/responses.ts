@@ -51,6 +51,11 @@ export interface PocketVideo {
   length: string; // The video length
 }
 
+export interface PocketTag {
+  item_id: number;
+  tag: string;
+}
+
 export interface PocketItem {
   item_id: string; // Unique identifier for the saved item
   resolved_id: string; // Unique identifier for the actual URL of the saved item
@@ -65,8 +70,14 @@ export interface PocketItem {
   has_image: 0 | 1 | 2; // 1 if the item has images, 2 if the item is an image, 0 otherwise
   has_video: 0 | 1 | 2; // 1 if the item has videos, 2 if the item is a video, 0 otherwise
   word_count: number; // Number of words in the article
-  tags?: Record<string, any>; // JSON object of user tags associated with the item
+  tags?: Record<string, PocketTag>; // JSON object of user tags associated with the item
   authors?: Record<string, PocketAuthor>; // JSON object listing all authors associated with the item
   images?: Record<string, PocketImage>; // JSON object listing all images associated with the item
   videos?: Record<string, PocketVideo>; // JSON object listing all videos associated with the item
+}
+
+export interface PocketRetrieveResponse {
+  list: { [itemId: string]: PocketItem };
+  complete: number; // 0 or 1; 1 if this is the last page of results
+  status: number; // 1 if successful, 0 otherwise
 }

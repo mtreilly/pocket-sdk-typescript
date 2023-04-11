@@ -1,4 +1,4 @@
-import { parseErrorResponse } from "./parseErrorResponse";
+import { parseErrorResponse } from "./parseErrorResponse.js";
 
 interface AccessTokenResponse {
   access_token: string;
