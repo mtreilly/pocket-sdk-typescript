@@ -1,7 +1,7 @@
 # Pocket TypeScript SDK
 Welcome to the Pocket TypeScript SDK! This SDK provides a convenient and easy-to-use way to interact with the Pocket Network in your TypeScript or JavaScript applications. The SDK is designed to work seamlessly with the Pocket Network's APIs, providing you with a powerful set of tools to interact with the network.
 
-## Table of Contents
+##Table of Contents
 
 [Getting Started](#Getting Started)
 [Installation]
