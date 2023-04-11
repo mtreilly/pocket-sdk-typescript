@@ -81,3 +81,8 @@ export interface PocketRetrieveResponse {
   complete: number; // 0 or 1; 1 if this is the last page of results
   status: number; // 1 if successful, 0 otherwise
 }
+
+export interface PocketActionResponse {
+  action_results: string[];
+  status: number; // 1 if successful, 0 otherwise
+}

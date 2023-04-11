@@ -1,7 +1,7 @@
 import { processErrorResponse } from "./errors/processErrorResponse.js";
 import { processRateLimitError } from "./errors/processRateLimitError.js";
 import { PocketAction, PocketAddItemOptions, PocketGetOptions } from "./interfaces/requests.js";
-import { PocketAddItemResponse, PocketRetrieveResponse } from "./interfaces/responses.js";
+import { PocketActionResponse, PocketAddItemResponse, PocketRetrieveResponse } from "./interfaces/responses.js";
 
 export class PocketSDK {
   private consumerKey: string;
@@ -22,7 +22,7 @@ export class PocketSDK {
     return await response.json();
   }
 
-  public async sendActions(accessToken: string, actions: PocketAction[]): Promise<any> {
+  public async sendActions(accessToken: string, actions: PocketAction[]): Promise<PocketActionResponse> {
     const endpoint = "https://getpocket.com/v3/send";
     const params = this.buildActionParams(accessToken, actions);
     const searchParams = this.buildSearchParams(params);
@@ -37,7 +37,7 @@ export class PocketSDK {
   public async getItems(accessToken: string, options: PocketGetOptions): Promise<PocketRetrieveResponse> {
     const endpoint = "https://getpocket.com/v3/get";
     const params = this.buildGetParams(accessToken, options);
-    const searchParams = new URLSearchParams(params as any).toString();
+    const searchParams = new URLSearchParams(params as Record<string, string>).toString();
 
     const response = await this.sendRequest(endpoint, searchParams);
 
@@ -71,7 +71,7 @@ export class PocketSDK {
   }
 
   private buildSearchParams(params: object): string {
-    return new URLSearchParams(params as any).toString();
+    return new URLSearchParams(params as Record<string, string>).toString();
   }
 
   private async sendRequest(endpoint: string, searchParams: string): Promise<Response> {
