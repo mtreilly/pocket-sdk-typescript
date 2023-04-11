@@ -1,5 +1,5 @@
 {
-  "name": "pocket-sdk",
+  "name": "pocket-sdk-typescript",
   "type": "module",
   "version": "0.1.0",
   "description": "Simple SDK for interacting with getpocket api with TypeScript",
