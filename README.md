@@ -3,12 +3,12 @@ Welcome to the Pocket TypeScript SDK! This SDK provides a convenient and easy-to
 
 ## Table of Contents
 
-[Getting Started](#Getting-Started)
-[Installation](#Installation)
-[Usage](#Usage)
-[Examples](#Example)
-[Contributing](#Contributing)
-[License](#License)
+* [Getting Started](#Getting-Started)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Examples](#Example)
+* [Contributing](#Contributing)
+* [License](#License)
 
 # Getting Started
 
