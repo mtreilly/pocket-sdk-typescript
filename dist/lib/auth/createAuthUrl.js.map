@@ -1,0 +1,1 @@
+{"version":3,"file":"createAuthUrl.js","sourceRoot":"","sources":["../../../src/auth/createAuthUrl.ts"],"names":[],"mappings":"AAEA,MAAM,CAAC,OAAO,UAAU,aAAa,CAAC,YAAoB,EAAE,WAAmB,EAAE,QAAsB;IACrG,IAAI,QAAQ,KAAK,KAAK,EAAE;QACtB,OAAO,8CAA8C,YAAY,iBAAiB,kBAAkB,CAAC,WAAW,CAAC,EAAE,CAAC;KACrH;SAAM;QACL,OAAO,sDAAsD,YAAY,iBAAiB,kBAAkB,CAAC,WAAW,CAAC,EAAE,CAAC;KAC7H;AACH,CAAC"}
