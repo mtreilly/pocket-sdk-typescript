@@ -2,12 +2,12 @@ import getRequestToken from "../auth/getRequestToken.js";
 import createAuthUrl from "../auth/createAuthUrl.js";
 import * as dotenv from "dotenv";
 import getAccessToken from "../auth/getAccessToken.js";
-import { PocketSDK } from "../sdk.js";
+import PocketSDK from "../sdk.js";
 import open from "open";
 dotenv.config();
 
-const consumerKey = process.env.CONSUMER_KEY;
-const redirectUri = process.env.REDIRECT_URI;
+const consumerKey = process.env.CONSUMER_KEY ?? "";
+const redirectUri = process.env.REDIRECT_URI ?? "";
 
 const result = await getRequestToken(consumerKey, redirectUri);
 

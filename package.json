@@ -3,7 +3,8 @@
   "type": "module",
   "version": "0.1.1",
   "description": "Simple SDK for interacting with getpocket api with TypeScript",
-  "main": "sdk.ts",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
@@ -28,8 +29,5 @@
     "prettier": "^2.8.7",
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"
-  },
-  "exports": {
-    ".": "./sdk.js"
   }
 }
