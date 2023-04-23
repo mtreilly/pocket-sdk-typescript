@@ -1,13 +1,16 @@
 {
   "name": "pocket-sdk-typescript",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Simple SDK for interacting with getpocket api with TypeScript",
-  "main": "dist/lib/index.js",
-  "types": "dist/lib/index.d.ts",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/lib/index.js",
+  "files": [
+    "./dist/lib"
+  ],
   "scripts": {
     "test": "jest",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "release": "npm publish && git push origin main && git push --tags"
   },
   "author": "Micheál Reilly Sendal",
@@ -29,5 +32,19 @@
     "prettier": "^2.8.8",
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mtreilly/pocket-sdk-typescript"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "pocket",
+    "sdk",
+    "typescript",
+    "getpocket",
+    "api"
+  ]
 }

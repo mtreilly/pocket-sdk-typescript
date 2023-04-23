@@ -2,4 +2,7 @@ export { default as PocketSDK } from "./sdk";
 export { default as getRequestToken } from "./auth/getRequestToken";
 export { default as getAccessToken } from "./auth/getAccessToken";
 export { default as createAuthUrl } from "./auth/createAuthUrl";
+export function add(x, y) {
+    return x + y;
+}
 //# sourceMappingURL=index.js.map
