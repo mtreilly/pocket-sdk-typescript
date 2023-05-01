@@ -64,12 +64,12 @@ export interface PocketItem {
   resolved_url: string;
   given_title: string;
   resolved_title: string;
-  favorite: 0 | 1;
-  status: 0 | 1 | 2;
+  favorite: "0" | "1";
+  status: "0" | "1" | "2";
   excerpt: string;
-  is_article: 0 | 1;
-  has_image: 0 | 1 | 2;
-  has_video: 0 | 1 | 2;
+  is_article: "0" | "1";
+  has_image: "0" | "1" | "2";
+  has_video: "0" | "1" | "2";
   time_to_read: number;
   word_count: number;
   top_image_url: string;
