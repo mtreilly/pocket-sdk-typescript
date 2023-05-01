@@ -70,13 +70,14 @@ export interface PocketItem {
   is_article: "0" | "1";
   has_image: "0" | "1" | "2";
   has_video: "0" | "1" | "2";
+  is_index: "0" | "1";
   time_to_read: number;
-  word_count: number;
+  word_count: string;
   top_image_url: string;
-  time_added: number;
-  time_updated: number;
-  time_read: number;
-  time_favorited: number;
+  time_added: string;
+  time_updated: string;
+  time_read: string;
+  time_favorited: string;
   listen_duration_estimate: number;
   sort_id: number;
   lang: string;
@@ -84,6 +85,11 @@ export interface PocketItem {
   authors?: Record<string, PocketAuthor>;
   images?: Record<string, PocketImage>;
   videos?: Record<string, PocketVideo>;
+  domain_metadata?: {
+    name: string;
+    logo: string;
+    greyscale_logo: string;
+  };
 }
 export interface PocketRetrieveResponse {
   list: {
