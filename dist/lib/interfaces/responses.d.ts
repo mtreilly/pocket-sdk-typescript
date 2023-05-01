@@ -71,14 +71,14 @@ export interface PocketItem {
   has_image: "0" | "1" | "2";
   has_video: "0" | "1" | "2";
   is_index: "0" | "1";
-  time_to_read: number;
+  time_to_read: number; // in minutes
   word_count: string;
   top_image_url: string;
   time_added: string;
   time_updated: string;
   time_read: string;
   time_favorited: string;
-  listen_duration_estimate: number;
+  listen_duration_estimate: number; // in seconds
   sort_id: number;
   lang: string;
   tags?: Record<string, PocketTag>;
