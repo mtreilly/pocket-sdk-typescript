@@ -56,24 +56,145 @@ export interface PocketTag {
   tag: string;
 }
 
+/**
+ * Represents an item saved in Pocket.
+ *
+ * @interface PocketItem
+ */
 export interface PocketItem {
-  item_id: string; // Unique identifier for the saved item
-  resolved_id: string; // Unique identifier for the actual URL of the saved item
-  given_url: string; // URL that was saved with the item
-  resolved_url: string; // Final URL of the item
-  given_title: string; // Title saved along with the item
-  resolved_title: string; // Title found by Pocket when the item was parsed
-  favorite: 0 | 1; // 1 if the item is favorited, 0 otherwise
-  status: 0 | 1 | 2; // 1 if the item is archived, 2 if it should be deleted, 0 otherwise
-  excerpt: string; // First few lines of the item (articles only)
-  is_article: 0 | 1; // 1 if the item is an article, 0 otherwise
-  has_image: 0 | 1 | 2; // 1 if the item has images, 2 if the item is an image, 0 otherwise
-  has_video: 0 | 1 | 2; // 1 if the item has videos, 2 if the item is a video, 0 otherwise
-  word_count: number; // Number of words in the article
-  tags?: Record<string, PocketTag>; // JSON object of user tags associated with the item
-  authors?: Record<string, PocketAuthor>; // JSON object listing all authors associated with the item
-  images?: Record<string, PocketImage>; // JSON object listing all images associated with the item
-  videos?: Record<string, PocketVideo>; // JSON object listing all videos associated with the item
+  /**
+   * Unique identifier for the saved item.
+   *
+   * @type {string}
+   */
+  item_id: string;
+
+  /**
+   * Unique identifier for the actual URL of the saved item.
+   *
+   * @type {string}
+   */
+  resolved_id: string;
+
+  /**
+   * URL that was saved with the item.
+   *
+   * @type {string}
+   */
+  given_url: string;
+
+  /**
+   * Final URL of the item.
+   *
+   * @type {string}
+   */
+  resolved_url: string;
+
+  /**
+   * Title saved along with the item.
+   *
+   * @type {string}
+   */
+  given_title: string;
+
+  /**
+   * Title found by Pocket when the item was parsed.
+   *
+   * @type {string}
+   */
+  resolved_title: string;
+
+  /**
+   * Whether the item is favorited.
+   *
+   * @type {"0" | "1"}
+   */
+  favorite: "0" | "1";
+
+  /**
+   * Whether the item is archived, deleted, or neither.
+   *
+   * @type {"0" | "1" | "2"}
+   */
+  status: "0" | "1" | "2";
+
+  /**
+   * First few lines of the item (articles only).
+   *
+   * @type {string}
+   */
+  excerpt: string;
+
+  /**
+   * Whether the item is an article or not.
+   *
+   * @type {"0" | "1"}
+   */
+  is_article: "0" | "1";
+
+  /**
+   * Whether the item has images, is an image, or has neither.
+   *
+   * @type {"0" | "1" | "2"}
+   */
+  has_image: "0" | "1" | "2";
+
+  /**
+   * Whether the item has videos, is a video, or has neither.
+   *
+   * @type {"0" | "1" | "2"}
+   */
+  has_video: "0" | "1" | "2";
+
+  /**
+   * Number of words in the article.
+   *
+   * @type {string}
+   */
+  word_count: string;
+
+  /**
+   * JSON object of user tags associated with the item.
+   *
+   * @type {Record<string, PocketTag> | undefined}
+   */
+  tags?: Record<string, PocketTag>;
+
+  /**
+   * JSON object listing all authors associated with the item.
+   *
+   * @type {Record<string, PocketAuthor> | undefined}
+   */
+  authors?: Record<string, PocketAuthor>;
+
+  /**
+   * JSON object listing all images associated with the item.
+   *
+   * @type {Record<string, PocketImage> | undefined}
+   */
+  images?: Record<string, PocketImage>;
+
+  /**
+   * JSON object listing all videos associated with the item.
+   *
+   * @type {Record<string, PocketVideo> | undefined}
+   */
+  videos?: Record<string, PocketVideo>;
+  is_index: "0" | "1";
+  time_to_read: number;
+  top_image_url: string;
+  time_added: string;
+  time_updated: string;
+  time_read: string;
+  time_favorited: string;
+  listen_duration_estimate: number;
+  sort_id: number;
+  lang: string;
+  domain_metadata?: {
+    name: string;
+    logo: string;
+    greyscale_logo: string;
+  };
 }
 
 export interface PocketRetrieveResponse {
