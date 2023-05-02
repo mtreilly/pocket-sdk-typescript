@@ -148,6 +148,7 @@ export interface PocketItem {
 
   /**
    * Number of words in the article.
+   * The maximum value is 65535, even if the article is longer.
    *
    * @type {string}
    */
